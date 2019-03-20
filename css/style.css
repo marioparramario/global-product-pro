@@ -7,21 +7,30 @@ body {
 h4 {
   text-align: center;
   margin: 0;
-  font-size: 14px;
+  font-size: 10px;
 }
 .dot-container {
   position: relative;
-  width: 92px;
+  width: 96px;
   margin: 64px 0;
   margin-top: 16px;
+
 }
 .dot {
-  height: 14px;
-  width: 14px;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
   position: relative;
   cursor: pointer;
 }
+.dot:first-child {
+  margin-left: 6px;
+}
+
+.dot:last-child {
+  margin-right: 6px;
+}
+
 span {
   margin: 0 auto;
   display: block;
@@ -38,14 +47,14 @@ span:nth-of-type(1) {
 }
 span:nth-of-type(2) {
   background: #8AC2D9;
-  top: -14px;
+  top: -10px;
   z-index: 10;
   transform: scale(0);
   transition: 1200ms cubic-bezier(0.23,1,.32,1);
 }
 span:nth-of-type(3) {
   border: 1px #5FA8C8 solid;
-  top: -29px;
+  top: -21px;
   left: -1px;
   opacity: 0;
 }
