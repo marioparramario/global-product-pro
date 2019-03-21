@@ -29,11 +29,9 @@ h4 {
 .dot:first-child {
   margin-left: 6px;
 }
-
 .dot:last-child {
   margin-right: 6px;
 }
-
 span {
   margin: 0 auto;
   display: block;
@@ -43,8 +41,11 @@ span {
   position: absolute;
   top: 0;
 }
-
 span:nth-of-type(1) {
+  background: #ABD2E2;
+  z-index: 1;
+}
+.undone span:nth-of-type(1) {
   background: #CBD7D9;
   z-index: 1;
 }
@@ -60,10 +61,9 @@ span:nth-of-type(3) {
   left: -2px;
   opacity: 0;
 }
-.active {
+.undone {
   pointer-events: none;
 }
-
 .active span:nth-of-type(1) {
   background: #5FA8C8;
 }
@@ -73,30 +73,8 @@ span:nth-of-type(3) {
 }
 .current span:nth-of-type(2) {
   transform: scale(1.1);
-  background: #ABD2E2;
+  background: #5FA8C8;
 }
-
-.two .active span:nth-of-type(3) {
-  -webkit-animation: scaling 1800ms cubic-bezier(0.23,1,.32,1) infinite;
-}
-.two .current span:nth-of-type(2) {
-  transition: 1000ms cubic-bezier(0.23,1,.32,1);
-}
-
-.three .active span:nth-of-type(3) {
-  -webkit-animation: scaling2 1500ms cubic-bezier(0.23,1,.32,1) infinite;
-}
-.three .current span:nth-of-type(2) {
-  transition: 1200ms cubic-bezier(0.23,1,.32,1);
-}
-
-.four .active span:nth-of-type(3) {
-  -webkit-animation: scaling2 1800ms cubic-bezier(0.23,1,.32,1) infinite;
-}
-.four .current span:nth-of-type(2) {
-  transition: 1400ms cubic-bezier(0.23,1,.32,1);
-}
-
 
 /* Keyframes */
 
@@ -108,16 +86,5 @@ From {
 To {
     opacity: 0;
     -webkit-transform: scale(2.0);
-  }
-}
-
-@-webkit-keyframes scaling2 {
-From {
-    opacity: 1;
-    -webkit-transform: scale(0.9);
-}
-To {
-    opacity: 0;
-    -webkit-transform: scale(1.6);
   }
 }
